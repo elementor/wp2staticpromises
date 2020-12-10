@@ -10,9 +10,6 @@
             "homepage": "https://github.com/mtdowling"
         }
     ],
-    "replace": {
-        "guzzlehttp/promises":"1.4.0"
-    },
     "require": {
         "php": ">=5.5"
     },
