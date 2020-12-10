@@ -1,6 +1,6 @@
 {
-    "name": "guzzlehttp/promises",
-    "description": "Guzzle promises library",
+    "name": "leonstafford/wp2staticpromises",
+    "description": "Safely namespaced guzzle promises for WP2Static",
     "keywords": ["promise"],
     "license": "MIT",
     "authors": [
