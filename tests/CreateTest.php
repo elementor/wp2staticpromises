@@ -1,12 +1,12 @@
 <?php
 
-namespace GuzzleHttp\Promise\Tests;
+namespace WP2StaticGuzzleHttp\Promise\Tests;
 
-use GuzzleHttp\Promise as P;
-use GuzzleHttp\Promise\FulfilledPromise;
-use GuzzleHttp\Promise\Promise;
-use GuzzleHttp\Promise\PromiseInterface;
-use GuzzleHttp\Promise\RejectedPromise;
+use WP2StaticGuzzleHttp\Promise as P;
+use WP2StaticGuzzleHttp\Promise\FulfilledPromise;
+use WP2StaticGuzzleHttp\Promise\Promise;
+use WP2StaticGuzzleHttp\Promise\PromiseInterface;
+use WP2StaticGuzzleHttp\Promise\RejectedPromise;
 use PHPUnit\Framework\TestCase;
 
 class CreateTest extends TestCase

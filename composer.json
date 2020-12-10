@@ -18,13 +18,13 @@
     },
     "autoload": {
         "psr-4": {
-            "GuzzleHttp\\Promise\\": "src/"
+            "WP2StaticGuzzleHttp\\Promise\\": "src/"
         },
         "files": ["src/functions_include.php"]
     },
     "autoload-dev": {
         "psr-4": {
-            "GuzzleHttp\\Promise\\Tests\\": "tests/"
+            "WP2StaticGuzzleHttp\\Promise\\Tests\\": "tests/"
         }
     },
     "scripts": {

@@ -1,14 +1,14 @@
 <?php
 
-namespace GuzzleHttp\Promise\Tests;
+namespace WP2StaticGuzzleHttp\Promise\Tests;
 
-use GuzzleHttp\Promise as P;
-use GuzzleHttp\Promise\FulfilledPromise;
-use GuzzleHttp\Promise\Promise;
+use WP2StaticGuzzleHttp\Promise as P;
+use WP2StaticGuzzleHttp\Promise\FulfilledPromise;
+use WP2StaticGuzzleHttp\Promise\Promise;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers GuzzleHttp\Promise\FulfilledPromise
+ * @covers WP2StaticGuzzleHttp\Promise\FulfilledPromise
  */
 class FulfilledPromiseTest extends TestCase
 {

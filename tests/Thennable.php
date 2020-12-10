@@ -1,8 +1,8 @@
 <?php
 
-namespace GuzzleHttp\Promise\Tests;
+namespace WP2StaticGuzzleHttp\Promise\Tests;
 
-use GuzzleHttp\Promise\Promise;
+use WP2StaticGuzzleHttp\Promise\Promise;
 
 class Thennable
 {

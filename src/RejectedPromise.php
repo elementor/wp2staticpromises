@@ -1,6 +1,6 @@
 <?php
 
-namespace GuzzleHttp\Promise;
+namespace WP2StaticGuzzleHttp\Promise;
 
 /**
  * A promise that has been rejected.

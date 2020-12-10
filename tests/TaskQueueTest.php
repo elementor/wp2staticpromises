@@ -1,8 +1,8 @@
 <?php
 
-namespace GuzzleHttp\Promise\Tests;
+namespace WP2StaticGuzzleHttp\Promise\Tests;
 
-use GuzzleHttp\Promise\TaskQueue;
+use WP2StaticGuzzleHttp\Promise\TaskQueue;
 use PHPUnit\Framework\TestCase;
 
 class TaskQueueTest extends TestCase

@@ -1,12 +1,12 @@
 <?php
 
-namespace GuzzleHttp\Promise\Tests;
+namespace WP2StaticGuzzleHttp\Promise\Tests;
 
-use GuzzleHttp\Promise\RejectionException;
+use WP2StaticGuzzleHttp\Promise\RejectionException;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers GuzzleHttp\Promise\RejectionException
+ * @covers WP2StaticGuzzleHttp\Promise\RejectionException
  */
 class RejectionExceptionTest extends TestCase
 {

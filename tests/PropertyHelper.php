@@ -1,6 +1,6 @@
 <?php
 
-namespace GuzzleHttp\Promise\Tests;
+namespace WP2StaticGuzzleHttp\Promise\Tests;
 
 /**
  * A class to help get properties of an object.

@@ -1,6 +1,6 @@
 <?php
 
-namespace GuzzleHttp\Promise;
+namespace WP2StaticGuzzleHttp\Promise;
 
 interface TaskQueueInterface
 {

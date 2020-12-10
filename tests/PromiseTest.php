@@ -1,17 +1,17 @@
 <?php
 
-namespace GuzzleHttp\Promise\Tests;
+namespace WP2StaticGuzzleHttp\Promise\Tests;
 
-use GuzzleHttp\Promise as P;
-use GuzzleHttp\Promise\CancellationException;
-use GuzzleHttp\Promise\FulfilledPromise;
-use GuzzleHttp\Promise\Promise;
-use GuzzleHttp\Promise\RejectedPromise;
-use GuzzleHttp\Promise\RejectionException;
+use WP2StaticGuzzleHttp\Promise as P;
+use WP2StaticGuzzleHttp\Promise\CancellationException;
+use WP2StaticGuzzleHttp\Promise\FulfilledPromise;
+use WP2StaticGuzzleHttp\Promise\Promise;
+use WP2StaticGuzzleHttp\Promise\RejectedPromise;
+use WP2StaticGuzzleHttp\Promise\RejectionException;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers GuzzleHttp\Promise\Promise
+ * @covers WP2StaticGuzzleHttp\Promise\Promise
  */
 class PromiseTest extends TestCase
 {
@@ -71,7 +71,7 @@ class PromiseTest extends TestCase
 
     public function testRejectsAndThrowsWhenWaitFailsToResolve()
     {
-        $this->expectException(\GuzzleHttp\Promise\RejectionException::class);
+        $this->expectException(\WP2StaticGuzzleHttp\Promise\RejectionException::class);
         $this->expectExceptionMessage('The promise was rejected with reason: Invoking the wait callback did not resolve the promise');
 
         $p = new Promise(function () {});
@@ -80,7 +80,7 @@ class PromiseTest extends TestCase
 
     public function testThrowsWhenUnwrapIsRejectedWithNonException()
     {
-        $this->expectException(\GuzzleHttp\Promise\RejectionException::class);
+        $this->expectException(\WP2StaticGuzzleHttp\Promise\RejectionException::class);
         $this->expectExceptionMessage('The promise was rejected with reason: foo');
 
         $p = new Promise(function () use (&$p) { $p->reject('foo'); });
@@ -127,7 +127,7 @@ class PromiseTest extends TestCase
 
     public function testThrowsWhenWaitingOnPromiseWithNoWaitFunction()
     {
-        $this->expectException(\GuzzleHttp\Promise\RejectionException::class);
+        $this->expectException(\WP2StaticGuzzleHttp\Promise\RejectionException::class);
 
         $p = new Promise();
         $p->wait();
@@ -193,7 +193,7 @@ class PromiseTest extends TestCase
 
     public function testCancelsPromiseWhenNoCancelFunction()
     {
-        $this->expectException(\GuzzleHttp\Promise\CancellationException::class);
+        $this->expectException(\WP2StaticGuzzleHttp\Promise\CancellationException::class);
 
         $p = new Promise();
         $p->cancel();

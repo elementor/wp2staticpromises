@@ -1,6 +1,6 @@
 <?php
 
-namespace GuzzleHttp\Promise;
+namespace WP2StaticGuzzleHttp\Promise;
 
 /**
  * Represents a promise that iterates over many promises and invokes

@@ -1,6 +1,6 @@
 <?php
 
-namespace GuzzleHttp\Promise;
+namespace WP2StaticGuzzleHttp\Promise;
 
 use Exception;
 use Generator;
@@ -17,7 +17,7 @@ use Throwable;
  * This can lead to less verbose code when doing lots of sequential async calls
  * with minimal processing in between.
  *
- *     use GuzzleHttp\Promise;
+ *     use WP2StaticGuzzleHttp\Promise;
  *
  *     function createPromise($value) {
  *         return new Promise\FulfilledPromise($value);

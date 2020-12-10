@@ -1,6 +1,6 @@
 <?php
 
-namespace GuzzleHttp\Promise;
+namespace WP2StaticGuzzleHttp\Promise;
 
 /**
  * Get the global task queue used for promise resolution.
@@ -11,7 +11,7 @@ namespace GuzzleHttp\Promise;
  *
  * <code>
  * while ($eventLoop->isRunning()) {
- *     GuzzleHttp\Promise\queue()->run();
+ *     WP2StaticGuzzleHttp\Promise\queue()->run();
  * }
  * </code>
  *

@@ -1,9 +1,9 @@
 <?php
 
-namespace GuzzleHttp\Promise\Tests;
+namespace WP2StaticGuzzleHttp\Promise\Tests;
 
-use GuzzleHttp\Promise\Promise;
-use GuzzleHttp\Promise\PromiseInterface;
+use WP2StaticGuzzleHttp\Promise\Promise;
+use WP2StaticGuzzleHttp\Promise\PromiseInterface;
 
 class NotPromiseInstance extends Thennable implements PromiseInterface
 {

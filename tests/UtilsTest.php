@@ -1,15 +1,15 @@
 <?php
 
-namespace GuzzleHttp\Promise\Tests;
+namespace WP2StaticGuzzleHttp\Promise\Tests;
 
-use GuzzleHttp\Promise\AggregateException;
-use GuzzleHttp\Promise as P;
-use GuzzleHttp\Promise\FulfilledPromise;
-use GuzzleHttp\Promise\Promise;
-use GuzzleHttp\Promise\PromiseInterface;
-use GuzzleHttp\Promise\RejectedPromise;
-use GuzzleHttp\Promise\RejectionException;
-use GuzzleHttp\Promise\TaskQueue;
+use WP2StaticGuzzleHttp\Promise\AggregateException;
+use WP2StaticGuzzleHttp\Promise as P;
+use WP2StaticGuzzleHttp\Promise\FulfilledPromise;
+use WP2StaticGuzzleHttp\Promise\Promise;
+use WP2StaticGuzzleHttp\Promise\PromiseInterface;
+use WP2StaticGuzzleHttp\Promise\RejectedPromise;
+use WP2StaticGuzzleHttp\Promise\RejectionException;
+use WP2StaticGuzzleHttp\Promise\TaskQueue;
 use PHPUnit\Framework\TestCase;
 
 class UtilsTest extends TestCase
@@ -30,7 +30,7 @@ class UtilsTest extends TestCase
 
     public function testUnwrapsPromisesWithNoDefaultAndFailure()
     {
-        $this->expectException(\GuzzleHttp\Promise\RejectionException::class);
+        $this->expectException(\WP2StaticGuzzleHttp\Promise\RejectionException::class);
 
         $promises = [new FulfilledPromise('a'), new Promise()];
         P\Utils::unwrap($promises);
@@ -149,7 +149,7 @@ class UtilsTest extends TestCase
 
     public function testThrowsIfImpossibleToWaitForSomeCount()
     {
-        $this->expectException(\GuzzleHttp\Promise\AggregateException::class);
+        $this->expectException(\WP2StaticGuzzleHttp\Promise\AggregateException::class);
         $this->expectExceptionMessage('Not enough promises to fulfill count');
 
         $a = new Promise(function () use (&$a) { $a->resolve('a'); });
@@ -159,7 +159,7 @@ class UtilsTest extends TestCase
 
     public function testThrowsIfResolvedWithoutCountTotalResults()
     {
-        $this->expectException(\GuzzleHttp\Promise\AggregateException::class);
+        $this->expectException(\WP2StaticGuzzleHttp\Promise\AggregateException::class);
         $this->expectExceptionMessage('Not enough promises to fulfill count');
 
         $a = new Promise();
@@ -497,15 +497,15 @@ class UtilsTest extends TestCase
         ];
 
         eval('
-        $promise = \GuzzleHttp\Promise\Coroutine::of(function () use ($promises) {
+        $promise = \WP2StaticGuzzleHttp\Promise\Coroutine::of(function () use ($promises) {
             $value = null;
-            $this->assertSame(\'skip\', (yield new \GuzzleHttp\Promise\FulfilledPromise(\'skip\')));
+            $this->assertSame(\'skip\', (yield new \WP2StaticGuzzleHttp\Promise\FulfilledPromise(\'skip\')));
             foreach ($promises as $idx => $p) {
                 $value = (yield $p);
                 $this->assertSame($idx, $value);
-                $this->assertSame(\'skip\', (yield new \GuzzleHttp\Promise\FulfilledPromise(\'skip\')));
+                $this->assertSame(\'skip\', (yield new \WP2StaticGuzzleHttp\Promise\FulfilledPromise(\'skip\')));
             }
-            $this->assertSame(\'skip\', (yield new \GuzzleHttp\Promise\FulfilledPromise(\'skip\')));
+            $this->assertSame(\'skip\', (yield new \WP2StaticGuzzleHttp\Promise\FulfilledPromise(\'skip\')));
             yield $value;
         });
 ');

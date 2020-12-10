@@ -1,11 +1,11 @@
 <?php
 
-namespace GuzzleHttp\Promise\Tests;
+namespace WP2StaticGuzzleHttp\Promise\Tests;
 
-use GuzzleHttp\Promise as P;
-use GuzzleHttp\Promise\Coroutine;
-use GuzzleHttp\Promise\Promise;
-use GuzzleHttp\Promise\PromiseInterface;
+use WP2StaticGuzzleHttp\Promise as P;
+use WP2StaticGuzzleHttp\Promise\Coroutine;
+use WP2StaticGuzzleHttp\Promise\Promise;
+use WP2StaticGuzzleHttp\Promise\PromiseInterface;
 use PHPUnit\Framework\TestCase;
 use ReflectionClass;
 
